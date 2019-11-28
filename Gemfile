@@ -26,6 +26,7 @@ gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'bootstrap-sass'
 gem 'omniauth-twitter'
+gem 'twitter'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 

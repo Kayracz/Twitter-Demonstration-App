@@ -6,11 +6,9 @@ class User < ApplicationRecord
     user.location = auth_hash['info']['location']
     user.image_url = auth_hash['info']['image']
     user.url = auth_hash['info']['urls']['Twitter']
-    # user.followers_count = auth_hash['extra']['raw_info']['followers_count']
     user.save!
     user
   end
-
 end
 end
 

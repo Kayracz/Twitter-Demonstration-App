@@ -12,7 +12,6 @@
         <li><strong>uID:</strong> <%= current_user.uid %></li>
         <li><strong>Location:</strong> <%= current_user.location %></li>
         <li><strong>URL:</strong> <%= current_user.url %></li>
-        <!-- <li><strong>Followers:</strong> <#%= current_user.followers_count %></li> -->
       </ul>
     </div>
   </div>
@@ -23,4 +22,6 @@
 </div>
 <% end %>
 
-
+FOLLOWERS
+<%= @followers.first.inspect %>
+<%= @followers.count %>
