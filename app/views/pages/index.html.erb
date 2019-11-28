@@ -1,23 +1,24 @@
 
 <% if current_user %>
   <div class="page-header">
-    <h1>Here is some info about you...</h1>
+    <h2 class="">Your Twitter Information & Followers</h2>
   </div>
   <div class="panel panel-default">
-    <div class="panel-body">
+    <div class="panel-body card">
       <ul>
-        <span><strong>Name:</strong> <%= current_user.name %></span><br>
-        <span><strong>Provider:</strong> <%= current_user.provider %></span>
+        <span class="profile"><%= image_tag current_user.image_url, alt: current_user.name %></span><br>
+        <span class="profile"><strong>Name:</strong> <%= current_user.name %></span><br>
+        <li><strong>Provider:</strong> <%= current_user.provider %></li>
         <li><strong>uID:</strong> <%= current_user.uid %></li>
         <li><strong>Location:</strong> <%= current_user.location %></li>
-        <li><strong>Avatar URL:</strong> <%= image_tag current_user.image_url, alt: current_user.name %></li>
         <li><strong>URL:</strong> <%= current_user.url %></li>
+        <!-- <li><strong>Followers:</strong> <#%= current_user.followers_count %></li> -->
       </ul>
     </div>
   </div>
 <% else %>
   <div class="jumbotron">
-  <h1>Welcome!</h1>
+  <h1 class="text-center">Welcome!</h1>
   <p>Authenticate via twitter to get started.</p>
 </div>
 <% end %>

@@ -8,30 +8,13 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0671cb6605.js" crossorigin="anonymous"></script>
 
   </head>
 
   <body>
 
-   <nav class="navbar navbar-inverse">
-  <div class="container">
-    <div class="navbar-header">
-      <%= link_to 'Twitter Followers', root_path, class: 'navbar-brand' %>
-    </div>
-    <div id="navbar">
-      <% if current_user %>
-        <ul class="nav navbar-nav pull-right">
-          <li><%= image_tag current_user.image_url, alt: current_user.name %></li>
-          <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
-        </ul>
-      <% else %>
-        <ul class="nav navbar-nav">
-          <li><%= link_to 'Twitter', '/auth/twitter' %></li>
-        </ul>
-      <% end %>
-    </div>
-  </div>
-</nav>
+    <%= render 'shared/nav' %>
 
 <div class="container">
   <% flash.each do |key, value| %>

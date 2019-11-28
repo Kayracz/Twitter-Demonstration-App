@@ -1,0 +1,19 @@
+  <nav class="navbar navbar-inverse">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to 'Twitter Followers', root_path, class: 'navbar-brand' %><i class="fab fa-twitter"></i>
+    </div>
+    <div id="navbar">
+      <% if current_user %>
+        <ul class="nav navbar-nav pull-right">
+          <span class="class-img"><%= image_tag current_user.image_url, alt: current_user.name %></span>
+          <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+        </ul>
+      <% else %>
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Twitter', '/auth/twitter' %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</nav>

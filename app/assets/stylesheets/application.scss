@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+
+
+// navbar
+.navbar{
+  background-color: #e8f1f5;
+  margin-bottom: 3%;
+}
+
+.class-img img {
+  border-radius: 50px !important;
+}
+
+.profile {
+  font-size: 20px;
+  margin-bottom: 500px;
+}
+
+.profile img{
+  margin-bottom: 10px;
+  margin-top: 10px;
+  height: 80px;
+  border-radius: 50px !important;
+}
+
+.fa-twitter{
+  color:#007bff;
+}
+
+
+// index
+
+.panel-body ul{
+  margin:10px;
+}
