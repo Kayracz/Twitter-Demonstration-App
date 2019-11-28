@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 
-  has_many :followers
+  has_and_belongs_to_many :followers
 
   class << self
   def from_omniauth(auth_hash)
