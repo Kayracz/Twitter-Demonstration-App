@@ -16,12 +16,25 @@
     </div>
   </div>
 <% else %>
-  <div class="jumbotron">
-  <h1 class="text-center">Welcome!</h1>
+  <div class="jumbotron text-center">
+  <h1>Welcome!</h1>
   <p>Authenticate via twitter to get started.</p>
 </div>
 <% end %>
 
-FOLLOWERS
-<%= @followers.first.inspect %>
-<%= @followers.count %>
+<h2 class="followerlist"> FOLLOWERS:</h2>
+<%#= @followers.count %>
+<%#= @followers.first(10).to_json %>
+  <%# @followers.each do |follower| %>
+  <div class="card">
+<ul>
+  <% @followers.each do |follower| %>
+    <% cache @followers do %>
+    <li class="card cardlist"><i class="fab fa-twitter-square"></i> <%= follower.name %> </li>
+  <% end %>
+  <% end %>
+</ul>
+</div>
+
+
+
