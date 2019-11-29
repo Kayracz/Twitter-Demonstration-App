@@ -1,17 +1,17 @@
 
 <% if current_user %>
-  <div class="page-header">
-    <h2 class="">Your Twitter Information & Followers</h2>
+  <div class="page-header text-center">
+    <h2>Your Twitter Information & Followers</h2>
   </div>
   <div class="panel panel-default">
-    <div class="panel-body card">
+    <div class="panel-body card border-primary cardlist text-center">
       <ul>
         <span class="profile"><%= image_tag current_user.image_url, alt: current_user.name %></span><br>
-        <span class="profile"><strong>Name:</strong> <%= current_user.name %></span><br>
-        <li><strong>Provider:</strong> <%= current_user.provider %></li>
-        <li><strong>uID:</strong> <%= current_user.uid %></li>
-        <li><strong>Location:</strong> <%= current_user.location %></li>
-        <li><strong>URL:</strong> <%= current_user.url %></li>
+        <span class="profile"><%= current_user.name %></span><br>
+        <span><strong>URL:</strong> <%= current_user.url %></span><br>
+        <span><strong>Location:</strong> <%= current_user.location %></span><br>
+        <span> <strong>Provider:</strong> <%= current_user.provider %></span><br>
+        <span><strong>uID:</strong> <%= current_user.uid %></span><br>
       </ul>
     </div>
   </div>
@@ -22,19 +22,13 @@
 </div>
 <% end %>
 
-<h2 class="followerlist"> FOLLOWERS:</h2>
-<%#= @followers.count %>
-<%#= @followers.first(10).to_json %>
-  <%# @followers.each do |follower| %>
-  <div class="card">
-<ul>
+<h2 class="followerlist"> Followers:</h2>
+<div class="card-columns">
+<ul class="fa-ul">
   <% @followers.each do |follower| %>
-    <% cache @followers do %>
-    <li class="card cardlist"><i class="fab fa-twitter-square"></i> <%= follower.name %> </li>
-  <% end %>
+    <li class="card border-primary cardlist w-60"><i class="fa-li fab fa-twitter-square"></i><%= follower.name %></li>
   <% end %>
 </ul>
 </div>
-
-
+</div>
 
