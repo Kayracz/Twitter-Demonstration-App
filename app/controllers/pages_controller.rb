@@ -7,7 +7,7 @@ class PagesController < ApplicationController
     puts 'followers before API', @followers, @followers.blank?
     if @followers.blank?
       twitter_response = TwitterAPI.new
-      @followers ||= twitter_response.client.followers
+      @followers = twitter_response.client.followers
       puts 'after API call', @followers
       @followers.each do |follower|
         f = Follower.find_or_create_by(name: follower.name, user_id: follower.id)
