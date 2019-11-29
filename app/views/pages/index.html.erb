@@ -14,21 +14,25 @@
         <span><strong>uID:</strong> <%= current_user.uid %></span><br>
       </ul>
     </div>
+
+    <h2 class="followerlist text-center"> Followers</h2>
+<div class="card-columns">
+<ul class="fa-ul">
+  <% @followers.each do |follower| %>
+    <li class="card border-primary cardlist w-60 cardclick"><i class="fa-li fab fa-twitter-square"></i><%= follower.name %></li>
+  <% end %>
+</ul>
+</div>
+</div>
+
   </div>
 <% else %>
   <div class="jumbotron text-center">
   <h1>Welcome!</h1>
   <p>Authenticate via twitter to get started.</p>
+  <button type="button" class="btn btn-outline-primary btn-lg"><%= link_to 'Check out your followers!', '/auth/twitter' %></button>
 </div>
 <% end %>
 
-<h2 class="followerlist"> Followers:</h2>
-<div class="card-columns">
-<ul class="fa-ul">
-  <% @followers.each do |follower| %>
-    <li class="card border-primary cardlist w-60"><i class="fa-li fab fa-twitter-square"></i><%= follower.name %></li>
-  <% end %>
-</ul>
-</div>
-</div>
+
 

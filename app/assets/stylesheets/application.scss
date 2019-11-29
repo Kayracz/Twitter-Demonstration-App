@@ -43,12 +43,10 @@
   color:#007bff;
 }
 
-
 // index
 
 .panel-body ul {
     font-family: helvetica Neue;
-    background-color: #e8f1f5;
     margin: 14px;
     padding: 18px;
 }
@@ -84,9 +82,23 @@
   margin-bottom:3%;
 }
 
-li:hover{
+.cardclick li:hover{
   background-color: #007bff !important;
   color: white;
 }
 
+.jumbotron {
+  background-color: #e8f1f5 !important;
+}
 
+
+.btn-outline-primary:hover {
+    color: #fff;
+    background-color: transparent !important;
+    border-color: #007bff;
+    text-decoration: none !important;
+}
+
+a:hover{
+  text-decoration: none !important;
+}
