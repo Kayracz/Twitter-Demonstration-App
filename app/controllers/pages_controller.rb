@@ -1,13 +1,11 @@
 class PagesController < ApplicationController
   def index
-    #binding.pry
     ufs = UserFollower.where(user_id: session[:user_id]) #user_id, follower_id
     follower_ids = ufs.map{|u| u.follower_id} # follower_id
     @followers = Follower.where(id: follower_ids)
 
 
     if @followers.blank? && current_user.present?
-      #binding.pry
       twitter_response = TwitterAPI.new
       @followers = twitter_response.client(current_user).followers
       @followers.each do |follower|
