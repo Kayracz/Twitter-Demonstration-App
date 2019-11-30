@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 2019_11_28_221650) do
     t.string "location"
     t.string "image_url"
     t.string "url"
+    t.string "token"
+    t.string "secret"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

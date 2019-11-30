@@ -9,6 +9,8 @@ class User < ApplicationRecord
     user.location = auth_hash['info']['location']
     user.image_url = auth_hash['info']['image']
     user.url = auth_hash['info']['urls']['Twitter']
+    user.token = auth_hash.credentials.token
+    user.secret = auth_hash.credentials.secret
     user.save!
     user
   end
