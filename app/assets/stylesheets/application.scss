@@ -51,6 +51,7 @@ body {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
+
 .panel-body ul {
   font-family: helvetica Neue;
   margin: 14px;
@@ -195,6 +196,10 @@ a:hover {
 .fa-question-circle {
   font-size: 20px;
   margin-top: 15px;
+}
+
+.btn-outline-primary{
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23) !important;
 }
 
 //modal
