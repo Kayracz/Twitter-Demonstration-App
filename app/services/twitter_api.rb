@@ -1,6 +1,5 @@
 class TwitterAPI
   def client(user)
-    #binding.pry
     return if user.blank?
     @client ||= Twitter::REST::Client.new do |config|
       config.consumer_key        = ENV["TWITTER_KEY"]
