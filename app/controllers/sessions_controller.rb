@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 def create
   begin
     @user = User.from_omniauth(request.env['omniauth.auth'])
+    #flash[:warning] = "There was an error while trying to authenticate you..."
     session[:user_id] = @user.id
     flash[:success] = "Welcome #{@user.name}, Here is your data!"
   rescue StandardError => e
